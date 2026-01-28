@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pro Roulette Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Roulette</h1>
+        <h2 id="balance-display">Balance: $10,000</h2>
+
+        <div class="betting-area">
+            <div>
+                <label>Number (0-36 or 00):</label>
+                <input type="text" id="numberInput" placeholder="e.g. 17">
+                <input type="number" id="numberBet" placeholder="Bet Amount">
+            </div>
+            <div>
+                <label>Even/Odd:</label>
+                <select id="evenInput">
+                    <option value="">None</option>
+                    <option value="Even">Even</option>
+                    <option value="Odd">Odd</option>
+                </select>
+                <input type="number" id="evenBet" placeholder="Bet Amount">
+            </div>
+            <div>
+                <label>Color:</label>
+                <select id="colorInput">
+                    <option value="">None</option>
+                    <option value="Red">Red</option>
+                    <option value="Black">Black</option>
+                </select>
+                <input type="number" id="colorBet" placeholder="Bet Amount">
+            </div>
+        </div>
+
+        <button id="spinButton">SPIN THE WHEEL</button>
+
+        <div id="output-box">
+            <p id="winLossOutput">Place your bets and spin!</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
