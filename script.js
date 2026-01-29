@@ -7,9 +7,9 @@ let today = new Date().toDateString();
 
 if (lastVisit !== today) {
     balance += balance* 0.1;
-    balance += 1010
+    balance += 1500
     localStorage.setItem("lastVisitDate", today);
-    alert("Daily Bonus! You got paid 1010$ and You have gained 10% intrest.");
+    alert("Daily Bonus! You got paid 1500$ and You have gained 10% intrest.");
 }
 
 // Update the screen on load
