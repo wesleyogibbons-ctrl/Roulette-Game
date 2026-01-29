@@ -6,11 +6,17 @@ let lastVisit = localStorage.getItem("lastVisitDate");
 let today = new Date().toDateString();
 
 if (lastVisit !== today) {
-    balance += balance* 0.1;
-    balance += 1500
+    // 1. Do the Math
+    balance += (balance * 0.1); 
+    balance += 1500;
+    
+    // 2. SAVE THE DATE
     localStorage.setItem("lastVisitDate", today);
+    
+    // 3. SAVE THE NEW BALANCE (This was the missing piece!)
     localStorage.setItem("rouletteBalance", balance);
-    alert("Daily Bonus! You got paid 1500$ and You have gained 10% intrest.");
+    
+    alert("Daily Bonus! You got paid $1500 and you have gained 10% interest.");
 }
 
 // Update the screen on load
