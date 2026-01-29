@@ -9,6 +9,7 @@ if (lastVisit !== today) {
     balance += balance* 0.1;
     balance += 1500
     localStorage.setItem("lastVisitDate", today);
+    localStorage.setItem("rouletteBalance", balance);
     alert("Daily Bonus! You got paid 1500$ and You have gained 10% intrest.");
 }
 
