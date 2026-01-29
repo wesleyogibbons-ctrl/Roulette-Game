@@ -90,5 +90,15 @@ document.getElementById("spinButton").addEventListener("click", function() {
 });
 
 function updateDisplay() {
-    document.getElementById("balance-display").innerText = "Balance: $" + balance.toLocaleString();
+    const balanceElement = document.getElementById("balance-display");
+    
+    // Set the text
+    balanceElement.innerText = "Balance: $" + Math.floor(balance).toLocaleString();
+
+    // Change color based on debt
+    if (balance < 0) {
+        balanceElement.style.color = "#ff4d4d"; // Bright Red
+    } else {
+        balanceElement.style.color = "#00ff00"; // Neon Green
+    }
 }
