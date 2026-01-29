@@ -6,9 +6,9 @@ let lastVisit = localStorage.getItem("lastVisitDate");
 let today = new Date().toDateString();
 
 if (lastVisit !== today) {
-    balance += 1000;
+    balance += balance* 0.1;
     localStorage.setItem("lastVisitDate", today);
-    alert("Daily Bonus! $1000 added to your account.");
+    alert("Daily Bonus! You have gained 10% intrest.");
 }
 
 // Update the screen on load
@@ -27,7 +27,7 @@ document.getElementById("spinButton").addEventListener("click", function() {
 
     const totalBet = nBet + eoBet + cBet;
 
-    if (totalBet > balance) {
+    if (totalBet - 10000 > balance) {
         alert("You don't have enough money for that bet!");
         return;
     }
