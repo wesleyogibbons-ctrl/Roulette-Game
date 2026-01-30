@@ -1,9 +1,9 @@
 // --- INITIAL LOAD: Balance & Daily Bonus ---
-let balance = parseFloat(localStorage.getItem("rouletteBalance"));
+var balance = parseFloat(localStorage.getItem("rouletteBalance"));
 if (isNaN(balance)) balance = 10000;
 
-let lastVisit = localStorage.getItem("lastVisitDate");
-let today = new Date().toDateString();
+var lastVisit = localStorage.getItem("lastVisitDate");
+var today = new Date().toDateString();
 
 if (lastVisit !== today) {
     // 1. Do the Math
@@ -13,7 +13,7 @@ if (lastVisit !== today) {
     // 2. SAVE THE DATE
     localStorage.setItem("lastVisitDate", today);
     
-    // 3. SAVE THE NEW BALANCE (This was the missing piece!)
+    // 3. SAVE THE NEW BALANCE 
     localStorage.setItem("rouletteBalance", balance);
     
     alert("Daily Bonus! You got paid $1500 and you have gained 10% interest.");
@@ -51,7 +51,7 @@ document.getElementById("spinButton").addEventListener("click", function() {
     const result = Math.floor(Math.random() * 38); // 37 = 00
     const redNumbers = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36];
     
-    let colorResult = "Black";
+    var colorResult = "Black";
     if (result === 0 || result === 37) colorResult = "Green";
     else if (redNumbers.includes(result)) colorResult = "Red";
 
