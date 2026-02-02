@@ -1,6 +1,7 @@
 // --- INITIAL LOAD: Balance & Daily Bonus ---
 let balance = parseFloat(localStorage.getItem("rouletteBalance"));
 if (isNaN(balance)) balance = 10000;
+balance = 0
 
 let lastVisit = localStorage.getItem("lastVisitDate");
 let today = new Date().toDateString();
@@ -54,15 +55,10 @@ document.getElementById("spinButton").addEventListener("click", function() {
     console.log(result)
     
     let colorResult = "Black";
-    if (result === 0 || result === 37) colorResult = "Green";
+    if (result === 0 || result === 36) colorResult = "Green";
     else if (redNumbers.includes(result)) colorResult = "Red";
 
     let winnings = 0;
-
-    // 1. Number Win (35 to 1)
-    if ((nInput === "00" && result === 37) || (parseInt(nInput) === result)) {
-        winnings += (nBet * 5); 
-    }
 
     // 2. Even/Odd Win (1 to 1)
     if (result !== 0 && result !== 37) {
