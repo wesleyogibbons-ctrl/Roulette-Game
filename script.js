@@ -50,6 +50,8 @@ document.getElementById("spinButton").addEventListener("click", function() {
     // Spin!
     const result = Math.floor(Math.random() * 38); // 37 = 00
     const redNumbers = [1, 3, 5, 7, 9, 12, 14, 16, 18, 19, 21, 23, 25, 27, 30, 32, 34, 36];
+    //Testing odds
+    console.log(result)
     
     let colorResult = "Black";
     if (result === 0 || result === 37) colorResult = "Green";
