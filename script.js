@@ -61,7 +61,7 @@ document.getElementById("spinButton").addEventListener("click", function() {
 
     // 1. Number Win (35 to 1)
     if ((nInput === "00" && result === 37) || (parseInt(nInput) === result)) {
-        winnings += (nBet * 15); 
+        winnings += (nBet * 5); 
     }
 
     // 2. Even/Odd Win (1 to 1)
